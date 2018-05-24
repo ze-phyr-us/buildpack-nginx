@@ -43,7 +43,7 @@ fi
 
 if [[ ! -d "${PCRE_TARBALL%.tar.gz}" ]]; then
   echo "-----> download and unzip pcre"
-  curl "http://ftp.csx.cam.ac.uk/pub/software/programming/pcre/${PCRE_TARBALL}" -o "${PCRE_TARBALL}"
+  curl "https://ftp.pcre.org/pub/pcre/${PCRE_TARBALL}" -o "${PCRE_TARBALL}"
   tar xzf "${PCRE_TARBALL}" && rm -f "${PCRE_TARBALL}"
 fi
 
