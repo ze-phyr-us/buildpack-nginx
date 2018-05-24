@@ -13,6 +13,6 @@ http {
   server {
     listen <%= ENV["PORT"] %>;
     server_name  _;
-    rewrite   ^  <%= ENV["REDIRECT_TARGET"] %>;
+    return 301 <%= ENV["REDIRECT_TARGET"] %>;
   }
 }
