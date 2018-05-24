@@ -13,11 +13,6 @@ http {
   server {
     listen <%= ENV["PORT"] %>;
     server_name  _;
-    <% if ENV["ROOT"] %>
-      root /app/www/<%= ENV["ROOT"] %>;
-    <% else %>
-      root /app/www;
-    <% end %>
-    index index.html;
+    rewrite   ^  <%= ENV["REDIRECT_TARGET"] %>;
   }
 }
